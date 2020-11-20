@@ -1,6 +1,7 @@
 /* eslint-disable global-require,import/no-dynamic-require,import/no-extraneous-dependencies,no-console */
 const path = require('path');
 const glob = require('glob');
+// eslint-disable-next-line
 const webpack = require('webpack');
 
 const examplesDir = path.resolve(__dirname, '../examples');

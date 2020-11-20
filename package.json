@@ -1,7 +1,7 @@
 {
-  "name": "svg-sprite-loader",
-  "version": "5.0.0",
-  "description": "Webpack loader for creating SVG sprites",
+  "name": "@module-federation/svg-sprite-loader",
+  "version": "6.0.0",
+  "description": "Webpack 5 loader for creating SVG sprites",
   "keywords": [
     "svg",
     "sprite",
@@ -10,11 +10,12 @@
     "webpack",
     "webpack2",
     "webpack3",
+    "webpack5",
     "webpack loader",
     "webpack plugin"
   ],
-  "homepage": "https://github.com/JetBrains/svg-sprite-loader#readme",
-  "bugs": "https://github.com/JetBrains/svg-sprite-loader/issues",
+  "homepage": "https://github.com/module-federation/svg-sprite-loader#readme",
+  "bugs": "https://github.com/module-federation/svg-sprite-loader/issues",
   "license": "MIT",
   "author": "kisenka",
   "repository": "JetBrains/svg-sprite-loader",
@@ -42,6 +43,7 @@
     "url-slug": "2.0.0"
   },
   "devDependencies": {
+    "extract-text-webpack-plugin": "^3.0.2",
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-plugin-transform-object-rest-spread": "6.23.0",
@@ -102,10 +104,11 @@
     "release": "yarn build:examples && git add examples && standard-version -a && git push --follow-tags origin master",
     "release:dry-run": "standard-version --no-verify",
     "test": "mocha test/*.test.js",
-    "test:all": "yarn test:webpack-2 && yarn test:webpack-3 && yarn test:webpack-4",
+    "test:all": "yarn test:webpack-2 && yarn test:webpack-3 && yarn test:webpack-4 && yarn test:webpack-5",
     "test:webpack-2": "yarn env webpack-2 && yarn test",
     "test:webpack-3": "yarn env webpack-3 && yarn test",
     "test:webpack-4": "yarn env webpack-4 && yarn test",
+    "test:webpack-5": "yarn env webpack-5 && yarn test",
     "upload-coverage": "codeclimate-test-reporter < coverage/lcov.info"
   }
 }
